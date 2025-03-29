@@ -1,0 +1,8 @@
+fragment TransactionInitializeSessionPayload on TransactionInitializeSession {
+  action {
+    amount
+    currency
+    actionType
+  }
+  data
+}

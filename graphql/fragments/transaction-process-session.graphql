@@ -1,0 +1,7 @@
+fragment TransactionProcessSessionPayload on TransactionProcessSession {
+  action {
+    amount
+    currency
+    actionType
+  }
+}
