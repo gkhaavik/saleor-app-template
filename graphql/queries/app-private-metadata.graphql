@@ -1,0 +1,9 @@
+query AppPrivateMetadata {
+  app {
+    id
+    privateMetadata {
+      key
+      value
+    }
+  }
+} 

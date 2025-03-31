@@ -4,4 +4,39 @@ fragment TransactionProcessSessionPayload on TransactionProcessSession {
     currency
     actionType
   }
+  transaction {
+    id
+    pspReference
+    actions
+    createdAt
+    privateMetadata {
+      key
+      value
+    }
+  }
+  data
+  merchantReference
+  sourceObject {
+    ... on Order {
+      id
+      number
+      userEmail
+      total {
+        gross {
+          amount
+          currency
+        }
+      }
+    }
+    ... on Checkout {
+      id
+      totalPrice {
+        gross {
+          amount
+          currency
+        }
+      }
+      email
+    }
+  }
 }

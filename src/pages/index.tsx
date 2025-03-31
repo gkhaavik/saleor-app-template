@@ -1,9 +1,8 @@
-import { actions, useAppBridge } from "@saleor/app-sdk/app-bridge";
+import { useAppBridge } from "@saleor/app-sdk/app-bridge";
 import { Box, Button, Input, Text } from "@saleor/macaw-ui";
 import { NextPage } from "next";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { MouseEventHandler, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -97,12 +96,15 @@ const CopyManifest = () => {
 };
 
 const IndexPage: NextPage = () => {
+  console.log("IndexPage");
+
   const { appBridgeState } = useAppBridge();
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
+    console.log("appBridgeState", appBridgeState);
   }, []);
 
   if (!mounted) {

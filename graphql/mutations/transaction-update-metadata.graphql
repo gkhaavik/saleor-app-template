@@ -1,0 +1,24 @@
+mutation TransactionUpdatePrivateMetadata(
+  $id: ID!
+  $input: [MetadataInput!]!
+) {
+  updatePrivateMetadata(
+    id: $id
+    input: $input
+  ) {
+    item {
+      ... on App {
+        id
+        privateMetadata {
+          key
+          value
+        }
+      }
+    }
+    errors {
+      field
+      message
+      code
+    }
+  }
+} 

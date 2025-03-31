@@ -1,6 +1,6 @@
 {
-  "name": "saleor-app-template",
-  "version": "1.0.0",
+  "name": "vipps-mobilepay-saleor-app",
+  "version": "1.0.1",
   "private": true,
   "license": "(BSD-3-Clause AND CC-BY-4.0)",
   "scripts": {
@@ -26,11 +26,12 @@
     "@saleor/app-sdk": "1.0.0",
     "@saleor/macaw-ui": "1.1.10",
     "@urql/exchange-auth": "^1.0.0",
+    "@vippsmobilepay/sdk": "^2.4.2",
     "@vitejs/plugin-react": "4.2.1",
     "graphql": "^16.8.1",
     "graphql-tag": "^2.12.6",
     "jsdom": "^20.0.3",
-    "next": "15.1.7",
+    "next": "^15.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-hook-form": "^7.55.0",

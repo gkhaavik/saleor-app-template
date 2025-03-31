@@ -20,21 +20,14 @@ export default createManifestHandler({
     const apiBaseURL = process.env.APP_API_BASE_URL ?? appBaseUrl;
 
     const manifest: AppManifest = {
-      name: "Vipps MobilePay App",
+      name: "Vipps MobilePay",
       tokenTargetUrl: `${apiBaseURL}/api/register`,
       appUrl: iframeBaseUrl,
       /**
        * Set permissions for app if needed
        * https://docs.saleor.io/docs/3.x/developer/permissions
        */
-      permissions: [
-        /**
-         * Add permission to allow "ORDER_CREATED" webhook registration.
-         *
-         * This can be removed
-         */
-        "HANDLE_PAYMENTS",
-      ],
+      permissions: ["HANDLE_PAYMENTS"],
       id: "com.zenfulcode.vipps-mobilepay",
       version: packageJson.version,
       /**
